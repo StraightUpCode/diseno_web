@@ -1,0 +1,21 @@
+{
+  "name": "siberian",
+  "version": "1.0.0",
+  "description": "Siberian Markup",
+  "main": "index.js",
+  "author": "Jacobo Amador y Roberto Sanchez",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx parcel src/index.html",
+    "build": "npx parcel build src/index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.7.6",
+    "postcss-import": "^12.0.1",
+    "postcss-modules": "^2.0.0",
+    "tailwindcss": "^1.4.4"
+  }
+}
