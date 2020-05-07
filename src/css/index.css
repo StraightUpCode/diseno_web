@@ -7,6 +7,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .some-class {
     background-color: blue;
+}
+
+.bg-orange {
+    background-color: orange;
 }
