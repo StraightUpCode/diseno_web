@@ -5,22 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siberian</title>
+    <script src='./js/index.js'></script>
+
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 </head>
 
 
 <body>
     <header class="grid grid-cols-12 h-16">
-       <div class="py-4 col-span-1 col-start-2">
-            <h1><a class="deco" href="./index.html">Siberian</a></h1>
+       <div class="my-4 col-span-1 col-start-2 flex items-center">
+            <h1><a class="brand text-decoration-none" href="./index.html">Siberian</a></h1>
         </div>
-        <nav class='col-span-7 py-4'>
-            <ul class='grid grid-flow-auto grid-cols-4 text-center'>
-                <li class='navigation-link'><a class='border border-primary' href="./product.html">Producto</a></li>
-                <li class='navigation-link'></li>
-                <li class='navigation-link'>Lorem Ipsun3</li>
-                <li class='navigation-link'>Lorem Ipsun4</li>
+        <nav class='col-span-7 my-4'>
+            <ul class='grid grid-flow-auto grid-cols-4 text-center align'>
+                <div class='flex justify-center items-center'>
+                    <li class='navigation-link py-2'><a class='text-decoration-none' href="./product.html">Producto</a></li>
+
+                </div>
+                <div class="flex justify-center items-center">
+                    <li class='navigation-link  '><div class="dropdown">
+                        <a href="" class="dropdown-toggle align-middle text-decoration-none	" data-toggle="dropdown" id="dropdownMenuLink" >
+                            Categorias
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item"href="./feature.html">Action</a>
+                            <a class="dropdown-item"href="#">Another Action</a>
+                        </div>
+                    </div></li>
+                </div>
             </ul>
         </nav>
         <section class="py-4 col-span-1 col-start-10">
@@ -44,7 +58,7 @@
                         <img src="https://via.placeholder.com/150" alt="w-full object-fit">
                     </li>
                     <li class="w-1/4">
-                        <img src="https://via.placeholder.com/150" altw-full object-fit">
+                        <img src="https://via.placeholder.com/150" alt="w-full object-fit">
                     </li>
                 </ul>
             </div>
@@ -174,7 +188,6 @@
             <a href="./contact-us.html">Contact Us</a>
         </section>
     </footer>
-    <script src='./js/index.js'></script>
 
    
 </body>

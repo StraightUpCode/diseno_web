@@ -20,10 +20,10 @@
     @apply rounded shadow-lg ;
 }
 
-/*
+
 .card-image {
     @apply w-full ;
-}*/
+}
 .card-image .horizontal {
     @apply w-6/12;
 }
@@ -40,7 +40,7 @@
 }
 
 .navigation-link {
-    @apply px-4 align-middle ;
+    @apply px-4 align-middle  ;
 }
 .navigation-link:hover {
     @apply font-bold;
@@ -53,4 +53,7 @@
 
 .card-text .description {
     text-overflow: ellipsis; 
+}
+.brand {
+   font-size: ;
 }
