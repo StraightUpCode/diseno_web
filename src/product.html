@@ -28,15 +28,15 @@
         </section>
     </header>
     <main class="grid grid-cols-12">
-       <div class="grid grid-cols-12 col-span-12 cl">
-        <section class="col-span-3 grid grid-cols-6 col-start-3 cl ">
-            <div class="grid col-span-6 grid-cols-4 cl">
-                <div class="col-span-2 col-start-2 cl py-8 my-8">
+       <div class="grid grid-cols-12 col-span-12 ">
+        <section class="col-span-3 grid grid-cols-6 col-start-3  ">
+            <div class="grid col-span-6 grid-cols-4 ">
+                <div class="col-span-2 col-start-2  py-8 my-8">
                     <img src="https://via.placeholder.com/150" alt="placeholder" class='w-full object-fit'>
                 </div>
             </div>
-            <div class="col-span-6 grid grid-cols-6 cl">
-                <ul class='col-span-6 flex justify-around cl'>
+            <div class="col-span-6 grid grid-cols-6 ">
+                <ul class='col-span-6 flex justify-around '>
                     <li class="w-1/4">
                         <img src="https://via.placeholder.com/150" alt="w-full object-fit">
                     </li>
@@ -49,7 +49,7 @@
                 </ul>
             </div>
         </section>
-        <section class="col-span-5  cl">
+        <section class="col-span-5  ">
           <div class='flex flex-wrap'>
             <div class='container w-full  my-4'>
                 <h1 class='text-2xl px-8 w-full '>Lorem ipsum dolor sit amet, consectetur adipiscing.
@@ -60,12 +60,31 @@
                 <hr class="w-9/12 px-8 ">
             </div>
             <div class='container h-64 px-16 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget pulvinar metus, a consectetur augue. Praesent at leo vel metus pharetra convallis vel quis sem. Vestibulum elit lectus, posuere vitae congue eget, feugiat sed purus. Morbi aliquet sapien velit, vel ornare odio maximus nec. Cras sit amet nunc ut dui aliquam volutpat. Nullam eu lectus tempus, tempor sapien vel, mollis dolor. In porttitor efficitur leo et lacinia. Donec ut sodales nibh. Etiam vel sem dictum, molestie dolor quis, interdum enim. Aenean auctor maximus augue, eu porta metus cursus id. Praesent molestie efficitur ultrices. Aliquam suscipit eros et nunc rhoncus, quis luctus metus bibendum. Nulla risus sapien, interdum vitae convallis a, faucibus a diam.</div>
-            <div class='container  cl'>
+            <div class='container  '>
                <div class='container flex justify-center '>
                 <button class='mx-4 btn btn-primary'>Comprar</button>
-                <button class='mx-4 btn btn-primary'>Compra Rapida</button>
+                <button type="button" class='mx-4 btn btn-primary' data-toggle='modal' data-target='#compraRapida'>Compra Rapida</button>
                </div>
             </div>
+            <div class="modal fade" id="compraRapida" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Compra Rapida</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      Su compra ha sido realizada exitosamente
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-primary">Aceptar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
         </section>
        </div>
