@@ -36,3 +36,10 @@
     @apply text-base text-right;
 }
 
+.navigation-link {
+    @apply px-4 align-middle ;
+}
+.navigation-link:hover {
+    @apply font-bold;
+}
+
