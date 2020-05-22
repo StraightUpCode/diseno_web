@@ -4,18 +4,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Siberian</title>
-	<font color="#000000" size="20" >
-		Siberian</font>
-	<link rel="stylesheet" href="src/css/flexslider.css">
-	<link rel="stylesheet" href="src/css/font-awesome.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
 
-	<script src="js/jquery-3.1.0.min.js"></script>
-	<script src="js/jquery.flexslider.js"></script>
+	<!-- <script src="js/jquery-3.1.0.min.js"></script> -->
+	<!-- <script src="js/jquery.flexslider.js"></script> -->
 	<script src="js/main.js"></script>
 </head>
 <body>
 <body style="background-color:white;">
-	<h1 id="page-title1">Featured</h1>
+	<header class="grid grid-cols-12 h-16">
+        <div class="py-4 col-span-1 col-start-2">
+            <h1><a href="./index.html">Siberian</a></h1>
+        </div>
+        <nav class='col-span-7 py-4'>
+            <ul class='grid grid-flow-auto grid-cols-4 text-center'>
+                <li class='navigation-link'><a href="./product.html">Producto</a></li>
+                <li class='navigation-link'><a href="./categories.html" >Categoria</a></li>
+                <li class='navigation-link'></li>
+                <li class='navigation-link'></li>
+            </ul>
+        </nav>
+        <section class="py-4 col-span-1 col-start-10">
+            <input type="search" name="search" placeholder="Search.." id="id">
+        </section>
+    </header>
+
+    <main class="grid grid-cols-12">
+        <h1 id="page-title1">Featured</h1>
 	<div class="flexslider">
 		<ul class="slides">
 
@@ -99,6 +115,20 @@
 
 		</ul>
 	</div>
+
+    </main>
+    <footer>
+        <section>
+            <div>
+                Contact us: 1234356
+            </div>
+        </section>
+
+        <section>
+            <a href="./contact-us.html">Contact Us</a>
+        </section>
+    </footer>
+    <script src='./js/index.js'></script>
 
 </body>
 </html>
