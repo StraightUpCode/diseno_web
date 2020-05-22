@@ -20,8 +20,12 @@
     @apply rounded shadow-lg ;
 }
 
+/*
 .card-image {
     @apply w-full ;
+}*/
+.card-image .horizontal {
+    @apply w-6/12;
 }
 
 .card-content {
@@ -45,4 +49,8 @@
 
 .cl{
     border: 1px solid black;
+}
+
+.card-text .description {
+    text-overflow: ellipsis; 
 }
