@@ -4,35 +4,46 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Siberian</title>
-	<link rel="stylesheet" href="css/flexslider.css">
 	<!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
-
+	
 	<!-- <script src="js/jquery-3.1.0.min.js"></script> -->
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<!-- <script src="js/jquery.flexslider.js"></script> -->
+	<link rel="stylesheet" href="css/flexslider.css">
 	<script src="js/main.js"></script>
 	<script src="./js/index.js"></script>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
 </head>
 <body>
 
 <body style="background-color:white;">
-	<header class="grid grid-cols-12 h-16">
-        <div class="py-4 col-span-1 col-start-2">
-            <h1><a href="./index.html">Siberian</a></h1>
-        </div>
-        <nav class='col-span-7 py-4'>
-            <ul class='grid grid-flow-auto grid-cols-4 text-center'>
-                <li class='navigation-link'><a href="./product.html">Producto</a></li>
-                <li class='navigation-link'><a href="./categories.html" >Categoria</a></li>
-                <li class='navigation-link'></li>
-                <li class='navigation-link'></li>
-            </ul>
-        </nav>
-        <section class="py-4 col-span-1 col-start-10">
-            <input type="search" name="search" placeholder="Search.." id="id">
-        </section>
-    </header>
+	<header class="grid grid-cols-12 h-32 bg-orange ">
+		<div class="py-4 col-span-1 col-start-2 flex items-center">
+			 <h1><a class="brand text-decoration-none color-white" href="./index.html">Siberian</a></h1>
+		 </div>
+		 <nav class='col-span-7 py-4 flex items-center'>
+			 <ul class='grid grid-flow-auto grid-cols-8 my-auto text-center align'>
+				 <div class='flex justify-center items-center'>
+					 <li class='navigation-link py-2'><a class='text-decoration-none color-white' href="./product.html">Producto</a></li>
+				 </div>
+				 <div class="flex justify-center items-center">
+					 <li class='navigation-link  '><div class="dropdown">
+						 <a href="" class="dropdown-toggle align-middle text-decoration-none	color-white" data-toggle="dropdown" id="dropdownMenuLink" >
+							 Categorias
+						 </a>
+						 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							 <a class="dropdown-item"href="./feature.html">Action</a>
+							 <a class="dropdown-item"href="#">Another Action</a>
+						 </div>
+					 </div></li>
+				 </div>
+			 </ul>
+		 </nav>
+		 <section class="py-4 col-span-1 col-start-10 flex items-center">
+			 <input type="search" name="search" placeholder="Search.." id="id">
+		 </section>
+	 </header>
 
     <main class="grid grid-cols-12">
         <h1 id="page-title1">Featured</h1>
