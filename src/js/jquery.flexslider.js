@@ -4,7 +4,8 @@
  * Contributing Author: Tyler Smith
  */
 ;
-(function ($) {
+
+export default function ($) {
 
   var focused = true;
 
@@ -1188,4 +1189,4 @@
       }
     }
   };
-})(jQuery);
+}
