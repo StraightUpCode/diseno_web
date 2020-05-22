@@ -43,3 +43,7 @@
     @apply font-bold;
 }
 
+
+.cl{
+    border: 1px solid black;
+}
