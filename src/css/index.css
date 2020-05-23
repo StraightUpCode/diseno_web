@@ -87,3 +87,7 @@
     background-color:  #8C2703 !important;
     color: white!important;
 }
+
+.dropdown:hover > .dropdown-menu {
+    display: block!important;
+  }
