@@ -13,26 +13,36 @@
 
 
 <body>
-    <header class="grid grid-cols-12 h-16">
-        <div class="py-4 col-span-1 col-start-2">
-            <h1><a href="./index.html">Siberian</a></h1>
-        </div>
-        <nav class='col-span-7 py-4'>
-            <ul class='grid grid-flow-auto grid-cols-4 text-center'>
-                <li class='navigation-link'><a href="./product.html">Producto</a></li>
-                <li class='px-4 align-middle'><a href="./feature.html">Feature</a> </li>
-                <li class='px-4 align-middle'><a href="./categories.html">Categories</a></li>
-                <li class='px-4 align-middle'><a href="./contact-us.html">Contactenos</a></li>
-            </ul>
-        </nav>
-        <section class="py-4 col-span-1 col-start-10">
-            <input type="search" name="search" placeholder="Search.." id="id">
-        </section>
-    </header>
+    <header class="grid grid-cols-12 h-32 bg-orange ">
+        <div class="py-4 col-span-1 col-start-2 flex items-center">
+             <h1><a class="brand text-decoration-none color-white" href="./index.html">Siberian</a></h1>
+         </div>
+         <nav class='col-span-7 py-4 flex items-center'>
+             <ul class='grid grid-flow-auto grid-cols-8 my-auto text-center align'>
+                 <div class='flex justify-center items-center'>
+                     <li class='navigation-link py-2'><a class='text-decoration-none color-white' href="./product.html">Producto</a></li>
+                 </div>
+                 <div class="flex justify-center items-center">
+                     <li class='navigation-link  '><div class="dropdown">
+                         <a href="./categories.html" class="align-middle text-decoration-none	color-white"  >
+                             Categorias
+                         </a>
+                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                             <a class="dropdown-item"href="./feature.html">Feature</a>
+                             <a class="dropdown-item"href="#">Another Feature</a>
+                         </div>
+                     </div></li>
+                 </div>
+             </ul>
+         </nav>
+         <section class="py-4 col-span-1 col-start-10 flex items-center">
+             <input type="search" name="search" placeholder="Search.." id="id">
+         </section>
+     </header>
 
     <main class="grid grid-cols-12">
         <section class='flex flex-col justify-center col-span-10 col-start-2'>
-            <div class="w-100">
+            <div class="w-100 mt-6">
                 <h2 class="text-center">Featured</h2>
             </div>
             <div class="flex w-100 mb-16 justify-end">
@@ -85,8 +95,10 @@
 
         <br>
 
-        <section class='flex flex-col justify-center col-span-9 col-start-2'>
-            <h2 class="text-center">Popular</h2>
+        <section class='flex flex-col justify-center col-span-10 col-start-2'>
+            <div class="w-100">
+                <h2 class="text-center">Popular</h2>
+            </div>
             <div class="flex w-100 mb-16 justify-end">
                 <div class="w-1/3 flex-shrink-0 flex justify-center ">
                   <div class='w-6/12 card '>
@@ -136,7 +148,7 @@
         </section>
     </main>
     <footer>
-        <section>
+        <section class="h-64">
             <div>
                 Contact us: 1234356
             </div>
