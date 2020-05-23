@@ -31,8 +31,8 @@ $(function() {
 		scroller_images_height: '80',
 		scroller_title_size: '12',
 		scroller_title_color: 'black',
-		scroller_show_count: '20',
-		directory: 'images'
+		scroller_show_count: '3',
+		directory: 'img'
 	});
 
 });
