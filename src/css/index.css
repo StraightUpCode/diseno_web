@@ -54,6 +54,40 @@
 .card-text .description {
     text-overflow: ellipsis; 
 }
-.brand {
-   font-size: ;
+
+
+.bg-blue {
+ background-color: #03668c !important;
 }
+.bg-yellow {
+    background-color: #d9a404 !important;
+}
+.bg-orange {
+    background-color : #f25c05 !important;
+}
+.bg-red {
+   background-color:  #8C2703 !important;
+
+}
+
+.color-white {
+    color:white!important;
+
+}
+
+.color-black {
+    color: #404040!important;
+}
+
+.btn-primary {
+   background-color: #03668c !important;
+}
+
+.btn-alert { 
+    background-color:  #8C2703 !important;
+    color: white!important;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block!important;
+  }

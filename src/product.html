@@ -14,19 +14,18 @@
 
 
 <body>
-    <header class="grid grid-cols-12 h-16">
-       <div class="my-4 col-span-1 col-start-2 flex items-center">
-            <h1><a class="brand text-decoration-none" href="./index.html">Siberian</a></h1>
+    <header class="grid grid-cols-12 h-32 bg-orange ">
+       <div class="py-4 col-span-1 col-start-2 flex items-center">
+            <h1><a class="brand text-decoration-none color-white" href="./index.html">Siberian</a></h1>
         </div>
-        <nav class='col-span-7 my-4'>
-            <ul class='grid grid-flow-auto grid-cols-4 text-center align'>
+        <nav class='col-span-7 py-4 flex items-center'>
+            <ul class='grid grid-flow-auto grid-cols-8 my-auto text-center align'>
                 <div class='flex justify-center items-center'>
-                    <li class='navigation-link py-2'><a class='text-decoration-none' href="./product.html">Producto</a></li>
-
+                    <li class='navigation-link py-2'><a class='text-decoration-none color-white' href="./product.html">Producto</a></li>
                 </div>
                 <div class="flex justify-center items-center">
                     <li class='navigation-link  '><div class="dropdown">
-                        <a href="" class="dropdown-toggle align-middle text-decoration-none	" data-toggle="dropdown" id="dropdownMenuLink" >
+                        <a href="./categories.html" class="align-middle text-decoration-none	color-white"  >
                             Categorias
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -37,8 +36,8 @@
                 </div>
             </ul>
         </nav>
-        <section class="py-4 col-span-1 col-start-10">
-            <input type="search" name="search" placeholder="Szearch.." id="id">
+        <section class="py-4 col-span-1 col-start-10 flex items-center">
+            <input type="search" name="search" placeholder="Search.." id="id">
         </section>
     </header>
     <main class="grid grid-cols-12">
@@ -93,7 +92,7 @@
                       Su compra ha sido realizada exitosamente
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-alert" data-dismiss="modal">Cerrar</button>
                       <button type="button" class="btn btn-primary">Aceptar</button>
                     </div>
                   </div>
