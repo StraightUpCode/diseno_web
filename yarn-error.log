@@ -1128,7 +1128,7 @@ Lockfile:
       caniuse-lite "^1.0.30001039"
       chalk "^2.4.2"
       normalize-range "^0.1.2"
-      num2fraction "^1.2.2"
+      num2frFeatured "^1.2.2"
       postcss "^7.0.27"
       postcss-value-parser "^4.0.3"
   
@@ -3562,9 +3562,9 @@ Lockfile:
     dependencies:
       boolbase "~1.0.0"
   
-  num2fraction@^1.2.2:
+  num2frFeatured@^1.2.2:
     version "1.2.2"
-    resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
+    resolved "https://registry.yarnpkg.com/num2frFeatured/-/num2frFeatured-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
     integrity sha1-b2gragJ6Tp3fpFZM0lidHU5mnt4=
   
   nwsapi@^2.1.3:

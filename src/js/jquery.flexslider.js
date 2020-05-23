@@ -104,7 +104,7 @@ export default function ($) {
             if (!slider.animating && (keycode === 39 || keycode === 37)) {
               var target = (keycode === 39) ? slider.getTarget('next') :
                            (keycode === 37) ? slider.getTarget('prev') : false;
-              slider.flexAnimate(target, slider.vars.pauseOnAction);
+              slider.flexAnimate(target, slider.vars.pauseOnFeatured);
             }
           });
         }
@@ -113,7 +113,7 @@ export default function ($) {
           slider.bind('mousewheel', function(event, delta, deltaX, deltaY) {
             event.preventDefault();
             var target = (delta < 0) ? slider.getTarget('next') : slider.getTarget('prev');
-            slider.flexAnimate(target, slider.vars.pauseOnAction);
+            slider.flexAnimate(target, slider.vars.pauseOnFeatured);
           });
         }
 
@@ -171,7 +171,7 @@ export default function ($) {
                   slider.flexAnimate(slider.getTarget("prev"), true);
                 } else if (!$(slider.vars.asNavFor).data('flexslider').animating && !$slide.hasClass(namespace + "active-slide")) {
                   slider.direction = (slider.currentItem < target) ? "next" : "prev";
-                  slider.flexAnimate(target, slider.vars.pauseOnAction, false, true, true);
+                  slider.flexAnimate(target, slider.vars.pauseOnFeatured, false, true, true);
                 }
               });
           }else{
@@ -192,7 +192,7 @@ export default function ($) {
                           target = $slide.index();
                       if (!$(slider.vars.asNavFor).data('flexslider').animating && !$slide.hasClass('active')) {
                           slider.direction = (slider.currentItem < target) ? "next" : "prev";
-                          slider.flexAnimate(target, slider.vars.pauseOnAction, false, true, true);
+                          slider.flexAnimate(target, slider.vars.pauseOnFeatured, false, true, true);
                       }
                   });
               });
@@ -245,7 +245,7 @@ export default function ($) {
 
               if (!$this.hasClass(namespace + 'active')) {
                 slider.direction = (target > slider.currentSlide) ? "next" : "prev";
-                slider.flexAnimate(target, slider.vars.pauseOnAction);
+                slider.flexAnimate(target, slider.vars.pauseOnFeatured);
               }
             }
 
@@ -270,7 +270,7 @@ export default function ($) {
 
               if (!$this.hasClass(namespace + 'active')) {
                 (target > slider.currentSlide) ? slider.direction = "next" : slider.direction = "prev";
-                slider.flexAnimate(target, slider.vars.pauseOnAction);
+                slider.flexAnimate(target, slider.vars.pauseOnFeatured);
               }
             }
 
@@ -288,8 +288,8 @@ export default function ($) {
         active: function() {
           slider.controlNav.removeClass(namespace + "active").eq(slider.animatingTo).addClass(namespace + "active");
         },
-        update: function(action, pos) {
-          if (slider.pagingCount > 1 && action === "add") {
+        update: function(Featured, pos) {
+          if (slider.pagingCount > 1 && Featured === "add") {
             slider.controlNavScaffold.append($('<li><a href="#">' + slider.count + '</a></li>'));
           } else if (slider.pagingCount === 1) {
             slider.controlNavScaffold.find('li').remove();
@@ -297,7 +297,7 @@ export default function ($) {
             slider.controlNav.eq(pos).closest('li').remove();
           }
           methods.controlNav.set();
-          (slider.pagingCount > 1 && slider.pagingCount !== slider.controlNav.length) ? slider.update(pos, action) : methods.controlNav.active();
+          (slider.pagingCount > 1 && slider.pagingCount !== slider.controlNav.length) ? slider.update(pos, Featured) : methods.controlNav.active();
         }
       },
       directionNav: {
@@ -324,7 +324,7 @@ export default function ($) {
 
             if (watchedEvent === "" || watchedEvent === event.type) {
               target = ($(this).hasClass(namespace + 'next')) ? slider.getTarget('next') : slider.getTarget('prev');
-              slider.flexAnimate(target, slider.vars.pauseOnAction);
+              slider.flexAnimate(target, slider.vars.pauseOnFeatured);
             }
 
             // setup flags to prevent event duplication
@@ -466,9 +466,9 @@ export default function ($) {
                     target = (updateDx > 0) ? slider.getTarget('next') : slider.getTarget('prev');
 
                 if (slider.canAdvance(target) && (Number(new Date()) - startT < 550 && Math.abs(updateDx) > 50 || Math.abs(updateDx) > cwidth/2)) {
-                  slider.flexAnimate(target, slider.vars.pauseOnAction);
+                  slider.flexAnimate(target, slider.vars.pauseOnFeatured);
                 } else {
-                  if (!fade) { slider.flexAnimate(slider.currentSlide, slider.vars.pauseOnAction, true); }
+                  if (!fade) { slider.flexAnimate(slider.currentSlide, slider.vars.pauseOnFeatured, true); }
                 }
               }
               el.removeEventListener('touchend', onTouchEnd, false);
@@ -481,7 +481,7 @@ export default function ($) {
 
             el.addEventListener('touchstart', onTouchStart, false);
         }else{
-            el.style.msTouchAction = "none";
+            el.style.msTouchFeatured = "none";
             el._gesture = new MSGesture();
             el._gesture.target = el;
             el.addEventListener("MSPointerDown", onMSPointerDown, false);
@@ -553,9 +553,9 @@ export default function ($) {
                         target = (updateDx > 0) ? slider.getTarget('next') : slider.getTarget('prev');
 
                     if (slider.canAdvance(target) && (Number(new Date()) - startT < 550 && Math.abs(updateDx) > 50 || Math.abs(updateDx) > cwidth/2)) {
-                        slider.flexAnimate(target, slider.vars.pauseOnAction);
+                        slider.flexAnimate(target, slider.vars.pauseOnFeatured);
                     } else {
-                        if (!fade) { slider.flexAnimate(slider.currentSlide, slider.vars.pauseOnAction, true); }
+                        if (!fade) { slider.flexAnimate(slider.currentSlide, slider.vars.pauseOnFeatured, true); }
                     }
                 }
 
@@ -596,12 +596,12 @@ export default function ($) {
           (dur) ? $obj.animate({"height": slider.slides.eq(slider.animatingTo).innerHeight()}, dur) : $obj.innerHeight(slider.slides.eq(slider.animatingTo).innerHeight());
         }
       },
-      sync: function(action) {
+      sync: function(Featured) {
         var $obj = $(slider.vars.sync).data("flexslider"),
             target = slider.animatingTo;
 
-        switch (action) {
-          case "animate": $obj.flexAnimate(target, slider.vars.pauseOnAction, false, true); break;
+        switch (Featured) {
+          case "animate": $obj.flexAnimate(target, slider.vars.pauseOnFeatured, false, true); break;
           case "play": if (!$obj.playing && !$obj.asNav) { $obj.play(); } break;
           case "pause": $obj.pause(); break;
         }
@@ -1000,7 +1000,7 @@ export default function ($) {
       slider.computedM = slider.itemM;
     };
 
-    slider.update = function(pos, action) {
+    slider.update = function(pos, Featured) {
       slider.doMath();
 
       // update currentSlide and slider.animatingTo if necessary
@@ -1015,9 +1015,9 @@ export default function ($) {
 
       // update controlNav
       if (slider.vars.controlNav && !slider.manualControls) {
-        if ((action === "add" && !carousel) || slider.pagingCount > slider.controlNav.length) {
+        if ((Featured === "add" && !carousel) || slider.pagingCount > slider.controlNav.length) {
           methods.controlNav.update("add");
-        } else if ((action === "remove" && !carousel) || slider.pagingCount < slider.controlNav.length) {
+        } else if ((Featured === "remove" && !carousel) || slider.pagingCount < slider.controlNav.length) {
           if (carousel && slider.currentSlide > slider.last) {
             slider.currentSlide -= 1;
             slider.animatingTo -= 1;
@@ -1112,7 +1112,7 @@ export default function ($) {
     thumbCaptions: false,           //Boolean: Whether or not to put captions on thumbnails when using the "thumbnails" controlNav.
 
     // Usability features
-    pauseOnAction: true,            //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
+    pauseOnFeatured: true,            //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
     pauseOnHover: false,            //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
     pauseInvisible: true,   		//{NEW} Boolean: Pause the slideshow when tab is invisible, resume when visible. Provides better UX, lower CPU usage.
     useCSS: true,                   //{NEW} Boolean: Slider will use CSS3 transitions if available
@@ -1137,7 +1137,7 @@ export default function ($) {
     controlsContainer: "",          //{UPDATED} jQuery Object/Selector: Declare which container the navigation elements should be appended too. Default container is the FlexSlider element. Example use would be $(".flexslider-container"). Property is ignored if given element is not found.
     manualControls: "",             //{UPDATED} jQuery Object/Selector: Declare custom control navigation. Examples would be $(".flex-control-nav li") or "#tabs-nav li img", etc. The number of elements in your controlNav should match the number of slides/tabs.
     customDirectionNav: "",         //{NEW} jQuery Object/Selector: Custom prev / next button. Must be two jQuery elements. In order to make the events work they have to have the classes "prev" and "next" (plus namespace)
-    sync: "",                       //{NEW} Selector: Mirror the actions performed on this slider with another slider. Use with care.
+    sync: "",                       //{NEW} Selector: Mirror the Featureds performed on this slider with another slider. Use with care.
     asNavFor: "",                   //{NEW} Selector: Internal property exposed for turning the slider into a thumbnail navigation for another slider
 
     // Carousel Options
